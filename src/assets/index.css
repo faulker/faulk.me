@@ -1,5 +1,75 @@
+@font-face {
+    font-family: 'Jura Light';
+    src: url('/fonts/Jura/Jura-Light.ttf') format('truetype');
+}
+
+@-webkit-keyframes pulse {
+    0% {background-color: #3B667D;}
+    50% {background-color: #909EA6;}
+    100% {background-color: #A1BBC9;}
+}
+
+html {
+    font-family: 'Jura Light';
+    font-size: 13pt;
+}
+
+html, body, #root {
+    height: 100vh;
+}
+
 body {
-  margin: 0;
-  padding: 0;
-  font-family: sans-serif;
+    -webkit-animation: pulse 20s infinite alternate;
+    background: -webkit-linear-gradient(left, rgba(89, 99, 111, 1) 0%, rgba(89, 99, 111, 0) 2%);
+    background: -o-linear-gradient(left, rgba(89, 99, 111, 1) 0%, rgba(89, 99, 111, 0) 2%);
+    background: linear-gradient(to right, rgba(89, 99, 111, 0.5) 0%, rgba(89, 99, 111, 0.1) 1.5%, rgba(89, 99, 111, 0) 2%);
+}
+
+.resume {
+
+}
+
+#root {
+    padding: 0 80px 0 30px;
+}
+
+a, a:focus, a:link {
+    font-family: 'Jura Light';
+    color: #0a2461;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #4a69bd;
+    border-bottom: 1px solid;
+}
+
+.grid-container {
+    height: 100%;
+    flex-grow: 1;
+}
+
+.title-linear-bar div {
+    animation-duration: 12.2s !important;
+    background-color: rgba(40, 66, 140, 1.0);
+}
+
+.title-linear-bar div:last-child {
+    animation-delay: 4.5s !important;
+}
+
+.social-links {
+    margin-top: 4px;
+    padding-left: 3%;
+}
+
+.social-links a {
+    color: rgba(255, 255, 255, 0.75);
+    margin: 0 2px;
+}
+
+.social-links a:hover {
+    color: rgba(30, 91, 128, 1.0);
+    text-decoration: none !important;
+    border-bottom: 0;
 }
