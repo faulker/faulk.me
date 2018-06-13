@@ -32,7 +32,7 @@ class WorldMap extends Component {
         window.google.charts.load('current', {
             'packages': ['geochart'],
             // https://developers.google.com/chart/interactive/docs/gallery/geochart
-            'mapsApiKey': 'AIzaSyCq9y0TiW0X4L7j50HLwpwk3t1NF7t0MSg'
+            'mapsApiKey': process.env.REACT_APP_GOOGLE_MAP_API
         });
         window.google.charts.setOnLoadCallback(drawRegionsMap);
 
