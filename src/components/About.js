@@ -165,7 +165,7 @@ class AboutMe extends Component {
                     <Typography component="p">
                         I fell in love with all things computer related when I was 12 years old. My first computer was a Packard Bell with an Intel 486 and 16MB of RAM. After breaking the system over and over again my father got sick of having to pay someone else to fix it and had one of his
                         friends show me how to fix it myself. From that point on I spent hours each day on the system breaking, fixing, and tweaking it. I learned to code in Basic on that system and it was the first system that connected me to the internet. Over the years I continued to learn and taught
-                        myself how to write in a number of languages from HTML to asm86, I learned to hate Java by learning to code in it, I learned Visual Basic, and QuakeC (so I could make Quake mods). I spent my teenage years learning that I loved the security and networking side of computers
+                        myself how to write in a number of languages from HTML to asm86, I learned Visual Basic, and QuakeC (so I could make Quake mods). I spent my teenage years learning that I loved the security and networking side of computers
                         and once I was done with high school I got a multiple Microsoft, Cisco, and CompTIA certificates. Over the next 14 years I worked in the computer field doing everything from network infrastructure to IT support, all the while continuing to learn how to code/script in
                         a number of other languages such as Visual C#, Python and PHP.
                     </Typography>
