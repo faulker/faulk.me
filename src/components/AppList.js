@@ -17,7 +17,7 @@ class AppList extends Component {
                                 sections.apps.map(app => (
                                     <a href={app.link} style={styles.link} key={app.key} target="_blank">
                                         <ListItem>
-                                            <i className={'fab ' + app.icon} style={styles.icon}/>
+                                            <i className={app.icon} style={styles.icon}/>
                                             <ListItemText primary={app.title} secondary={app.description}/>
                                         </ListItem>
                                     </a>

@@ -8,7 +8,7 @@ const ResumeApps = [
                 title: 'WallabagIt',
                 link: 'https://github.com/faulker/WallabagIt',
                 description: 'A Chrome extension that integrates with the Wallabag "Read It When You Want" app.',
-                icon: 'fa-chrome',
+                icon: 'fab fa-chrome',
                 github: 'https://github.com/faulker/WallabagIt',
             },
             {
@@ -16,7 +16,7 @@ const ResumeApps = [
                 title: 'AppTailr',
                 link: 'https://github.com/faulker/AppTailr',
                 description: 'Quickly enable/disable selected extensions from the chrome bar.',
-                icon: 'fa-chrome',
+                icon: 'fab fa-chrome',
             },
         ]
     },
@@ -30,17 +30,30 @@ const ResumeApps = [
                 title: 'Laravel Eloquent Export',
                 link: 'https://github.com/faulker/eloquent-export',
                 description: 'Give the ability to build export profiles/configurations to be used by a artisan command to export data from the database using Eloquent models.',
-                icon: 'fa-laravel',
+                icon: 'fab fa-laravel',
             },
             {
                 key: 'laravelrackspace',
                 title: 'Laravel 5 Rackspace CloudQueue Driver',
                 link: 'https://github.com/faulker/laravel5-rackspace-cloudqueue',
                 description: 'A Laravel 5 que driver for queuing job to Rackspace\'s CloudQueue service.',
-                icon: 'fa-laravel',
+                icon: 'fab fa-laravel',
             },
         ]
     },
+    {
+        slug: 'javascript',
+        title: 'JavaScript',
+        apps: [
+            {
+                key: 'jqInlineEdit',
+                title: 'jQuery Inline Edit',
+                link: 'https://faulker.github.io/jqInlineEdit/',
+                description: 'A small javascript library built on top of jQuery that allows you to easily do inline text editing using a text input, select, or textarea.',
+                icon: 'fab fa-js',
+            },
+        ]
+    }
 ];
 
 const OldApps = [
