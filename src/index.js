@@ -2,7 +2,7 @@ import React, {Component} from 'react';
 import ReactDOM from 'react-dom';
 import './assets/index.css';
 import './assets/icons.css';
-import registerServiceWorker from './registerServiceWorker';
+import {unregister} from './registerServiceWorker';
 import {MemoryRouter} from "react-router-dom";
 
 import Tabs, {Tab} from 'material-ui/Tabs';
@@ -128,9 +128,6 @@ class Index extends Component {
                         <br/>
                         <OldAppsList/>
                     </TabContainer>}
-
-                    {/*{value === 2 && <TabContainer>*/}
-                    {/*</TabContainer>}*/}
                 </div>
             </div>
         );
@@ -146,4 +143,4 @@ ReactDOM.render(
     document.getElementById('root')
 );
 
-registerServiceWorker();
+unregister();

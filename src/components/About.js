@@ -181,7 +181,7 @@ class AboutMe extends Component {
                     <List>
                         <ListItem>
                             <ListIcon icon="icon-camera"/>
-                            <ListItemText>I am a hobby <a href="http://down-time.com" target="_blank">photographer</a></ListItemText>
+                            <ListItemText>I am a hobby <a href="http://down-time.com" target="_blank" rel="noopener noreferrer">photographer</a></ListItemText>
                         </ListItem>
                         <ListItem>
                             <ListIcon icon="icon-fight"/>

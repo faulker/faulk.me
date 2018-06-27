@@ -15,7 +15,7 @@ class AppList extends Component {
                         <List>
                             {ResumeApps.map(sections => (
                                 sections.apps.map(app => (
-                                    <a href={app.link} style={styles.link} key={app.key} target="_blank">
+                                    <a href={app.link} style={styles.link} key={app.key} target="_blank" rel="noopener noreferrer">
                                         <ListItem>
                                             <i className={app.icon} style={styles.icon}/>
                                             <ListItemText primary={app.title} secondary={app.description}/>

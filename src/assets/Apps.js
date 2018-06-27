@@ -53,6 +53,19 @@ const ResumeApps = [
                 icon: 'fab fa-js',
             },
         ]
+    },
+    {
+        slug: 'sites',
+        title: 'Sites',
+        apps: [
+            {
+                key: 'market-finder',
+                title: 'Farmers Market Finder',
+                link: 'https://farmersmarket.pi4.us/',
+                description: 'A tool for locating farmers markets registered with the USDA',
+                icon: 'fab fa-react',
+            },
+        ]
     }
 ];
 
