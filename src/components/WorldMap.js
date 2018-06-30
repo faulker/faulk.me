@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import Modal from 'material-ui/Modal';
+import Modal from '@material-ui/core/Modal';
 
 const styles = {
     worldMap: {

@@ -1,8 +1,10 @@
 import React, {Component} from 'react';
-import List, {ListItem, ListItemText} from 'material-ui/List';
+import List from '@material-ui/core/List';
+import ListItem from '@material-ui/core/ListItem';
+import ListItemText from '@material-ui/core/ListItemText';
 import {ResumeApps, OldApps} from "../assets/Apps";
-import {createMuiTheme, MuiThemeProvider} from 'material-ui/styles';
-import Typography from 'material-ui/Typography';
+import {createMuiTheme, MuiThemeProvider} from '@material-ui/core/styles';
+import Typography from '@material-ui/core/Typography';
 
 class AppList extends Component {
     render()

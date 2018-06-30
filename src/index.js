@@ -1,71 +1,34 @@
 import React, {Component} from 'react';
 import ReactDOM from 'react-dom';
+import {unregister} from './registerServiceWorker';
+
 import './assets/index.css';
 import './assets/icons.css';
-import {unregister} from './registerServiceWorker';
+import './assets/app-device.css';
+import './assets/app-desktop.css';
+
 import {MemoryRouter} from "react-router-dom";
 
-import Tabs, {Tab} from 'material-ui/Tabs';
-import CssBaseline from 'material-ui/CssBaseline';
-import {LinearProgress} from 'material-ui/Progress';
-import Typography from 'material-ui/Typography';
-import Divider from 'material-ui/Divider';
+import Tabs from '@material-ui/core/Tabs';
+import Tab from '@material-ui/core/Tab';
+import CssBaseline from '@material-ui/core/CssBaseline';
+import LinearProgress from '@material-ui/core/LinearProgress';
+import Typography from '@material-ui/core/Typography';
+import Divider from '@material-ui/core/Divider';
+import Tooltip from '@material-ui/core/Tooltip';
 
 import {AppList, OldAppsList} from './components/AppList';
-import About from './components/About';
+import About from './About';
+import Me from './components/Me';
+import Footer from './components/Footer';
 
-const styles = {
-    linearBar: {
-        background: 'rgba(12, 36, 97, 1.0)',
-        height: 1,
-        width: '60%',
-    },
-    basicInfo: {
-        position: 'fixed',
-        width: '40vw',
-        minHeight: '100vh',
-        top: '40vh',
-        verticalAlign: 'middle',
-        color: '#333',
-    },
-    resume: {
-        left: '40vw',
-        position: 'absolute',
-        width: '50vw',
-        backgroundColor: 'rgba(255, 255, 255, 1.0)',
-        minHeight: '100%',
-        borderLeft: '1px solid #777',
-        borderRight: '1px solid #777',
-        padding: '0 30px'
-    },
-    name: {
-        paddingLeft: '3%',
-        marginBottom: '1px',
-    },
-    tabs: {
-        paddingBottom: '15px',
-    },
-};
-
-class LinearBar extends Component {
-    render()
-    {
-        return (
-            <div>
-                <LinearProgress style={styles.linearBar} className="title-linear-bar"/>
-            </div>
-        );
-    }
-}
-
-function TabContainer(props)
-{
+const TabContainer = (props) => {
     return (
-        <Typography component="div" style={{ padding: 8 * 3 }}>
+        <Typography component="div" className="tab-content">
             {props.children}
         </Typography>
     );
-}
+};
 
 class Index extends Component {
 
@@ -73,9 +36,6 @@ class Index extends Component {
     {
         super(props);
         this.state = {
-            // alignItems: 'center',
-            // justify: 'center',
-            // direction: 'row',
             value: 0
         };
         this.links = {
@@ -94,41 +54,60 @@ class Index extends Component {
     {
         const { value } = this.state;
         return (
-            <div>
-                <div style={styles.basicInfo}>
-                    <div className='basic-info'>
-                        <h1 style={styles.name}>Winter Faulk</h1>
-                        <LinearBar/>
-                        <div className="social-links">
-                            <a href={this.links.linkedin} title="Linked-In"><i className="fab fa-linkedin fa-2x"/></a>
-                            <a href={this.links.github} title="github"><i className="fab fa-github-square fa-2x"/></a>
-                        </div>
+            <div className="wrapper">
+                <div id="avatar" className="section">
+                    <Me/>
+                </div>
+
+                <div id="header" className="section">
+                    <h1 className="my-name">Winter Faulk</h1>
+                    <LinearProgress className="title-linear-bar"/>
+                    <div className="social-links">
+                        <Tooltip
+                            title="Email"
+                            enterDelay={300}
+                        >
+                            <a href="mailto:winter@faulk.me"><i className="fas fa-envelope-square fa-2x"/></a>
+                        </Tooltip>
+                        <Tooltip
+                            title="Linked-In"
+                            enterDelay={300}
+                        >
+                            <a href={this.links.linkedin}><i className="fab fa-linkedin fa-2x"/></a>
+                        </Tooltip>
+                        <Tooltip
+                            title="GitHub"
+                            enterDelay={300}
+                        >
+                            <a href={this.links.github}><i className="fab fa-github-square fa-2x"/></a>
+                        </Tooltip>
                     </div>
                 </div>
-                <div style={styles.resume} className="resume">
+                <div id="menu" className="section">
                     <Tabs
-                        style={styles.tabs}
-                        value={this.state.value}
+                        className="tabs"
+                        value={value}
                         onChange={this.handleChange}
                         indicatorColor="primary"
                         textColor="primary"
                         centered>
                         <Tab label="About"/>
                         <Tab label="Projects"/>
-                        {/*<Tab label="Applications"/>*/}
-
                     </Tabs>
+                </div>
+                <div id="content" className="section">
                     {value === 0 && <TabContainer>
                         <About/>
                     </TabContainer>}
 
                     {value === 1 && <TabContainer>
                         <AppList/>
-                        <Divider style={styles.divider}/>
+                        <Divider/>
                         <br/>
                         <OldAppsList/>
                     </TabContainer>}
                 </div>
+                <Footer className="section"/>
             </div>
         );
     }
